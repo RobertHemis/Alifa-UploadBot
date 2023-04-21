@@ -1,0 +1,74 @@
+{
+  "name": "Alifa-UploadBot",
+  "description": "Telegram's best open source URL uploader bot. Create your fork now.",
+  "logo": "",
+  "keywords": [
+    "telegram",
+    "best",
+    "yt-dlp",
+    "downloader",
+    "open",
+    "source",
+    "ffmpeg",
+    "remote",
+    "uploader"
+  ],
+  "website": "https://abeseil.t.me",
+  "repository": "https://github.com/RobertHemis/Alifa-UploadBot",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string. @BotFather",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "DATABASE_URL": {
+      "description": "Your Mongodb Url",
+      "value": ""
+    },
+    "LOG_CHANNEL": {
+      "description": "Your any own private channel ID where your bot as admin with full permission",
+      "value": ""
+    },
+    "UPDATES_CHANNEL": {
+      "description": "Your Update channel id ",
+      "value": ""
+    },
+    "DEF_THUMB_NAIL_VID_S": {
+      "description": "Set a thumbnail URL",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Your telegram ID to broadcast",
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "Your bot username without @",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
+
